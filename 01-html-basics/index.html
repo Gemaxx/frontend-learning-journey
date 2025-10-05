@@ -35,16 +35,19 @@
             <h2 id="Overview ">Overview </h2>
         </header>
 
-        <article style="display:flex; flex-direction: row; border-radius: 10px; background-color: rgb(249, 245, 236); padding: 20px; box-sizing: border-box; border:2px dashed rgb(219, 220, 183);">
-            <a href="https://fb.com/gemax0"><img src="profile pic.jpg" alt="gemax profile pic" width="160" title="Gemax picture" style="margin-right:10px; border-radius: 20px;"></a>
-            <hr style="margin: 0px; margin-right: 10px;">
-            <div class="bio" style="color: gray;">
-                <p style="font-size: 30px; margin:0px; font-weight: bold; text-align:left;">Ahmed Ibrahim</p>
-                <p style="margin-top: 6px;">CS Graduate</p>
-                <p>Currently studying Software Engineering/Front-end.</p>
-                <q style="text-align: center; font-style: italic; border-left: 3px solid rgb(190, 187, 156); padding-left: 10px;">I'm trying to give my life a better-quality problems.</q>
-            </div>
+        <article class="bio-card">
+        <a href="https://fb.com/gemax0" target="_blank">
+            <img src="profile pic.jpg" alt="Gemax profile picture" title="Gemax picture" class="bio-img">
+        </a>
+
+        <div class="bio-info">
+            <h2>Ahmed Ibrahim</h2>
+            <p class="title">CS Graduate</p>
+            <p>Currently studying Software Engineering / Front-end.</p>
+            <blockquote>I'm trying to give my life a better-quality problems.</blockquote>
+        </div>
         </article>
+
         <hr>
         <h2 id="Skills">Skills</h2>
         <table>
@@ -103,7 +106,7 @@
         <p><a href="mailto:gemax.hope@gmail.com">Mail me</a></p>
         <button onclick="document.location='https://www.fb.com'">Click here</button>
         <hr>
-        <h2>Adress</h2>
+        <h2>Address</h2>
         <address>
             Ibrahimiya, 
             Sharqiya<br>
@@ -182,39 +185,89 @@
            HTML Forms
         </h2>
         <h3>Get in touch with me! ✨</h3>
-        <form action="post">
-            <legend>Personal Info:</legend>
+        <form action="" method="post" autocomplete="on">
             <fieldset>
+                <legend>Personal Info:</legend>
                 <label for="name">Name</label>
-                <input type="text" id="name" placeholder="Your name"><br>
+                <input type="text" id="name" name="name" placeholder="Your name" required><br>
+                
                 <label for="email">Email</label>
-                <input type="email" id="Email" placeholder="Your email"><br>
+                <input type="email" id="Email" name="email" placeholder="Your email" required><br>
             </fieldset>
             <fieldset>
-                <legend>Service type:</legend>
+                <legend >Service type:</legend>
                 <input type="radio" id="smalltask" name="Service-type">
                 <label for="smalltask">Small task</label><br>
+               
                 <input type="radio" id="short-term" name="Service-type">
                 <label for="short-term">Short-term Project</label><br>
+               
                 <input type="radio" id="long-term" name="Service-type">
                 <label for="long-term">Long-term Project</label>
             </fieldset>
 
-            <legend>Chose your Services</legend>
             <fieldset>
+                <legend>Chose your Services</legend>
                 <input type="checkbox" id="product" name="Services" value="Product Management">
-                <label for="Product">Product Management</label><br>
+                <label for="product">Product Management</label><br>
+               
                 <input type="checkbox" id="analysis" name="Services" value="Systems Analysis">
-                <label for="Analysis">Systems Analysis</label><br>
+                <label for="analysis">Systems Analysis</label><br>
+               
                 <input type="checkbox" id="uiux" name="Services" value="UI/UX Design">
                 <label for="uiux">UI/UX Design</label><br>
+               
                 <input type="checkbox" id="frontend" name="Services" value="Frontend Development">
-                <label for="Product">Front-end Development</label><br>
+                <label for="frontend" style="width:100%;">Front-end Development</label><br>
+               
                 <input type="checkbox" id="backend" name="Services" value="Backend Development">
-                <label for="Product">Backend Development</label><br>
+                <label for="backend">Backend Development</label><br>
+               
                 <input type="checkbox" id="db" name="Services" value="Database Engineering">
-                <label for="Product">Database Engineering</label><br>
+                <label for="db">Database Engineering</label><br>
             </fieldset>
+            <fieldset>
+                <legend>Payment method</legend>
+                <select name="paymethod" id="paymetho">
+                    <option value="credit">credit</option>
+                    <option value="ewallet">e-wallet</option>
+                    <option value="paypal" selected>PayPal</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Select / Create Category</legend>
+                <input list="Categories" name="Category">
+                <datalist id="Categories">
+                    <option value="Product Management" selected></option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Software Engineering">Software Engineering</option>
+                    <option value="DevOps"></option>
+                </datalist>
+            </fieldset>
+            <fieldset oninput="total.value = parseInt(budget.value) + parseInt(bonus.value)">
+                <legend>Your budget</legend>
+                <label for="budget"> budget</label>
+                <input type="range" id="budget"name="budget" min="25" max="1000" value="25">
+                <span>+</span>
+                <label for="bonus">bonus</label>
+                <input type="number" name="bonus" id="bonus" min=0 value="0">
+                <span>=</span>
+                <output id="total" name="total" for="budget bonus">25</output><span>$</span>
+            </fieldset>
+            <label for="message">Leave a message</label><br>
+            <textarea name="message" id="message" placeholder="if any"></textarea><br>
+
+            <label for="attachment">add attachments</label>
+            <input type="file" name="" id="">
+
+            <input type="color" name="" id=""><br>
+         
+            <label for="appointment">make appointment </label>
+            <input type="datetime-local" name="appointment" id="appointment"><br>
+
+            <br><input type="submit" value="submit">
+            <button type="reset">reset</button>
+            
         </form>
 
     </body>
