@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Layout Practcing</title>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="nav-container">
+        <ul class="nav bg-blur">
+            <li ><a class="show-side">◧</a></li>
+            <li ><a href="#dispaly">Display</a></li>
+            <li><a href="#postioning">Postioning</a></li>
+            <li class="dropdown"><a> More ▾</a>
+                <div class="dropdown-content">
+                    <ul class="bg-blur">
+                        <li><a href="#link1">Link 1</a></li>
+                        <li><a href="#link2">Link 2</a></li>
+                        <li><a href="#link3">Link 3</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <div  class="cover">
+            <h1 class="cover-text" id="cover-title">Layout Practcing file</h1>    
+            <h2 class="cover-text" id="sub-title">This file for Practcing CSS</h2>    
+        </div>  
+    </header>
+    <nav >
+        <ul class="side-nav-bar bg-blur">
+            <li ><a href="#">Link1</a></li>
+            <li><a href="#">Link2</a></li>
+            <li><a href="#">Link3</a></li>
+            <li><a href="#">Link4</a></li>
+        </ul>
+
+        <ul class="breadcrumb">
+        <li><a href="#">Home</a><span tabindex="0"></span></li>
+        <li><a href="#">Pictures</a><span tabindex="0"></span></li>
+        <li><a href="#">Summer 25</a><span tabindex="0"></span></li>
+        <li><a href="#">Italy</a><span tabindex="0"></span></li>
+        </ul>
+
+        <br>
+
+        <main>
+            <h2>Display property</h2>
+            <table style="size: auto;">
+                <tr >
+                    <td class="first-col">inline-block</td>
+                    <td>Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height, width, padding, and margin values</td>
+                </tr>
+                <tr>
+                    <td class="first-col">Display: none</td>
+                    <td>The element is completely hidden from the document flow (does not take up any space).</td>
+                </tr>
+                <tr>
+                    <td class="first-col">Visability: hidden</td>
+                <td>The element will be hidden, <b>(but it will take up a space)</b></td>
+            </tr>
+        </table>
+        <hr>
+    </nav>
+
+    <article> 
+        <h2>Postioning</h2>
+        <ul>
+            <li>postion</li>
+            <li>z-inderx</li>
+            <li>overflow</li>
+            <li>float
+                <ul>
+                    <li>clear</li>
+                        <li>clearfix</li>
+                    </ul>
+                </li>
+                <li>Align <q><i>should back to after flex and grid lesson</i></q></li>
+            </ul>
+            <h3>Relative & Absolute Comp</h3>
+            <div 
+                style="background-color: #333; width:30rem; height:30rem; border-radius: 0.75rem; margin: auto; 
+                
+                            position: relative;">
+                <div 
+                    style="background-color: #222; width:10rem; border-radius: 0.75rem; height:10rem; position: absolute; left: 50%; top: 50%;
+                        translate: -50% -50%;
+                    ">
+                </div>
+            </div>
+
+        </article>
+
+    <h2>Combinators</h2>
+    <table>
+
+        <thead>
+            <tr>
+                <th class="first-col">Combinator</th>
+                <th>Sign</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="first-col">Descendant</td>
+                <td>(space)</td>
+                <td>All Childs of all descendant level</td>
+            </tr>
+            <tr>
+                <td class="first-col">Child</td>
+                <td> <code> &lt; </code> </td>
+                <td>firsl level childs only</td>
+            </tr>
+            <tr>
+                <td class="first-col">Next Sibling</td>
+                <td><code>+</code></td>
+                <td>1 sibling element only after follow the first selectio</td>
+            </tr>
+            <tr>
+                <td class="first-col">Subsequent-sibling</td>
+                <td><code>~</code></td>
+                <td>All siblings that follow the first selector</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Pseudo Classes & Elements</h2>
+    <h3>Pseudo Classes</h3>
+    <details open>
+        <summary>Pseudo Class order Note</summary>
+            <ul class="note">
+                <li>
+                 <code>a:hover</code> MUST come after <code> a:link</code> and <code>a:visited</code> in the CSS definition in order to be effective!
+                </li> 
+                <li>
+                    <code>a:active</code> MUST come after <code>a:hover</code> in the CSS definition in order to be effective! 
+                </li>
+                <li>
+                 Pseudo-class names are not case-sensitive.
+                </li>
+            </ul>
+    </details>
+    <h3>Pseudo Elements</h3>
+    <div style="margin:auto; width: 0%;">
+        <button class="bg-blur">Okay</button>    
+    </div>
+
+    <h2>Attr Selector & Form Styling</h2>
+    <div>
+        <form action="" method="post">
+            <fieldset>
+                <legend>Contact us</legend>
+
+                    <div class="form-group">
+
+                        <label for="fname">First Name</label><br>
+                        <input type="text" name="fname" id="fname" minlength="2" maxlength="20" required><br>
+            
+                    </div>
+                    <div class="form-group">
+                        <label for="lname" minlength="2" max="20">Last Name</label><br>
+                        <input type="text" id="lname" name="lname" required><br>                      
+                    </div>
+                    <div class="form-group">                        
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email" name="email" required><br>                    
+                    </div>
+                    <div class="form-group">
+                        <label for="">Birthdate</label><br>
+                        <input type="date" required><br>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Comment</label><br>
+                        <textarea name="" id=""></textarea>
+                    </div>
+
+                    <button type="submit">Send</button>
+
+            </fieldset>
+        </form>
+    </div> 
+    <article>
+        <h2>Responsiveness</h2>
+        <ul>
+            <li>Units</li>
+            <ul>
+                <li>Absoulute</li>
+                <ul>
+                    <li>px</li>
+                </ul>
+                <li>relative</li>
+                <ul>
+                    <li>vw: viewport max width</li>
+                    <li>vh: viewport max height</li>
+                    <li>%: precentage of parent size<li>
+                    <li>rem: precentage of root font size</li>
+                    <li>em:  precentage of parent font size</li>
+                </ul>
+            </ul>
+            <li>CSS Math Function</li>
+            <p>used to calc units</p>
+            <ul>
+                <li><code>clamp(MIN, PREFERRED, MAX) </code> for range</li>
+                <li><code>calc(expression)</code> for calculations</li>
+                <li><code>max(value1, value2, value3)</code> not less than the smallest value</li>
+                <li><code>min(value1, value2, value3)</code> not more than the max value</li>
+            </ul>
+            <li>
+                
+            </li>
+            <li></li>
+            <li></li>
+        </ul>
+    </article>
+    <article>
+        <h2>
+            advanced CSS
+        </h2>
+
+    </article>
+    
+        <div
+            style="
+            width: 300px;
+            height: 300px;
+            background-image: linear-gradient(120deg,black, purple, #ffffff);
+            border: #0993e328 solid 8px;
+            margin: auto;
+            border-radius: 10px 50px;
+            "
+        ></div>
+
+        <div
+            style="
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(circle, purple, white );
+            margin: auto;
+            border-radius: 10px 50px;
+            "
+        ></div>
+
+        <section>
+            <h3>shadow</h3>
+            <div
+            style="
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(circle, purple, white );
+            margin: auto;
+            border-radius: 10px 50px;
+
+            box-shadow:
+            0px 0px 10px 1px #ffffff,
+            0px 0px 20px 1px #ffffff,
+            0px 0px 30px 1px #ff00f7
+            ;
+            "
+            ></div>
+        </section>
+        <section>
+            <h3>Transformation & Transition</h3>
+            <h4>2D Transformation & Transition</h4>
+            <h5><pre>
+                translate(x, y)
+                scale(orignal-width%, orignal-height%)
+                skew(x-xis degree, y-axis deg)
+                rotat( clock-wise deg)
+                matrix( scaleX(), skewY(), skewX(), 
+                        scaleY(), translateX(), translateY())
+            </pre></h5>
+            <div class="twoD-transformation"
+            
+            style="
+            width: 300px;
+            height: 300px;
+            background-image: radial-gradient(circle, purple, white );
+            margin: auto;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            border-radius: 10px 50px;
+
+
+            box-shadow:
+            0px 0px 10px 1px #ffffff,
+            0px 0px 20px 1px #ffffff,
+            0px 0px 30px 1px #ff00f7
+            ;
+            "
+            ></div>
+
+            <h4>3D Transformation & Transition</h4>
+            <h5><pre>
+                translate(x, y)
+                scale(orignal-width%, orignal-height%)
+                skew(x-xis degree, y-axis deg)
+                rotat( clock-wise deg)
+                matrix( scaleX(), skewY(), skewX(), 
+                        scaleY(), translateX(), translateY())
+            </pre></h5>
+
+            <div class="perspective">
+
+                <div class="threeD-transformation"
+                
+                style="
+                    width: 300px;
+                    height: 300px;
+                    background-image: radial-gradient(circle, purple, white ) ;
+                    margin: auto;
+                    margin-top: 100px;
+                    margin-bottom: 100px;
+                    border-radius: 10px 50px;
+                    
+                    
+                    box-shadow:
+                    0px 0px 10px 1px #ffffff,
+                    0px 0px 20px 1px #ffffff,
+                    0px 0px 30px 1px #ff00f7
+                    ;
+                    "
+            ></div>
+            <h4>Transition</h4>
+            <h5>
+                <pre>
+                    transition: tracked-property change-duration speed-curve delay-duration,
+                    another-transition,;
+                    another-transition,
+                    ....
+                    ;
+                </pre>
+            </h5>
+            
+            <div class="transition-container-l1">
+                <p>Hover over the Elements with the mouse</p>
+                <div class="transition-container">
+                    <div class="transition" ></div>
+                    <div class="transition" ></div>          
+                </div>
+                <div class="transition-container">
+                    <div class="transition" ></div>
+                    <div class="transition"></div>          
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h4>Animation</h4>
+            <h5>
+                <pre>
+                     animation: name duration timing-function delay iteration-count direction fill-mode;
+
+                    ....
+                    ;
+                </pre>
+            </h5>
+
+
+            <div class="animation-container-l1">
+
+                <div class="animation-container">
+                    <div class="animation"></div>
+                    <div class="animation" style=" transform: scale(-1, 1); "></div>          
+                </div>
+
+                <div class="animation-container">
+                    <div class="animation" style=" transform: scale(1, -1);"></div>
+                    <div class="animation" style=" transform: scale(-1);"></div>          
+                </div>
+
+            </div>
+            
+
+        </div>
+    </section>
+
+    <article> 
+        <h2> Flex Box</h2>
+
+        <section >
+                <h3>Text effect</h3>
+                <div 
+                    class="flex-container"
+                    style="
+                    width: calc(100% - 30px);
+                    height: 500px;
+                    background-image: radial-gradient(circle, purple, white );
+                    margin: auto;
+                    padding: 0;
+                    border-radius: 10px 50px;
+                    
+                    box-shadow:
+                    0px 0px 10px 1px #ffffff,
+                    0px 0px 20px 1px #ffffff,
+                    0px 0px 30px 1px #ff00f7
+                    ;
+                    
+                    display: flex;
+                    flex-flow: row wrap;
+
+                    justify-content: start;
+                    justify-content:flex-end;
+                    
+                    justify-content:space-around;
+                    justify-content:space-between;
+                    justify-content: center;
+                    justify-content:space-evenly;
+
+                    align-items: center;
+                    align-items: flex-end;
+                    align-items: stretch;
+                    align-items: baseline;
+                    align-items: start;
+
+                    align-content: start;
+                    align-content: center;
+                    align-content: end;
+                    align-content: space-around;
+                    align-content: space-between;
+                    align-content: space-evenly;
+                    
+                    overflow: hidden;
+
+                    
+                    ">
+
+                <div
+                    style="
+                            border: gray solid 1px;
+                            border-radius: 10px 50px;
+                            width: 100px;
+                            height: 100px;
+                            color: black;
+                            "
+                >
+                <p 
+                style="
+                        color: inherit; 
+                        text-align: left;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+
+                        "
+                    
+                    >Hello, World! 1 Hello, World! 1 Hello, World! 1 Hello, World! 1 Hello, World! 1 Hello, World! 1</p>
+                </div>
+
+                <div
+                style=
+                "
+                    border: gray solid 1px;
+                    border-radius: 10px 50px;
+                    width: 100px;
+            
+                    color: black;
+                "
+                >
+                    <p style= "text-align: center; color: inherit;">Hello, World! 2</p>
+                </div>
+
+                <div
+                style=
+                "
+                    border: gray solid 1px;
+                    border-radius: 10px 50px;
+                    width: 100px;
+                    height: 100px;
+                    color: black;
+                "
+                >
+                    <p style= "text-align: center; color: inherit;">Hello, World! 3</p>
+                </div>
+                <div
+                style=
+                "
+                    border: gray solid 1px;
+                    border-radius: 10px 50px;
+                    width: 100px;
+                    height: 100px;
+                    color: black;
+                "
+                >
+                    <p style= "text-align: center; color: inherit;">Hello, World! 4</p>
+                </div>
+
+                <div
+                style=
+                "
+                    border: gray solid 1px;
+                    border-radius: 10px 50px;
+                    width: 100px;
+                    height: 100px;
+                    color: black;
+                "
+                >
+                    <p style= "text-align: center; color: inherit;">Hello, World! 5</p>
+                </div>
+
+                <div
+                style=
+                "
+                    border: gray solid 1px;
+                    border-radius: 10px 50px;
+                    width: 100px;
+                    height: 100px;
+                    color: black;
+                "
+                >
+                    <p style= "text-align: center; color: inherit;">Hello, World! 6</p>
+                </div>
+               
+                <div
+                style=
+                "
+                    border: gray solid 1px;
+                    border-radius: 10px 50px;
+                    width: 100px;
+                    height: 100px;
+                    color: black;
+                "
+                >
+                    <p style= "text-align: center; color: inherit;">Hello, World! 6</p>
+                </div>
+               
+                <div
+                style=
+                "
+                    border: gray solid 1px;
+                    border-radius: 10px 50px;
+                    width: 100px;
+                    height: 100px;
+                    color: black;
+                "
+                >
+                    <p style= "text-align: center; color: inherit;">Hello, World! 6</p>
+                </div>
+               
+                <div
+                style=
+                "
+                    border: gray solid 1px;
+                    border-radius: 10px 50px;
+                    width: 100px;
+                    height: 100px;
+                    color: black;
+                "
+                >
+                    <p style= "text-align: center; color: inherit;">Hello, World! 6</p>
+                </div>
+
+            </div>
+        </section>
+    </article>
+    
+
+    </main>   
+    <footer>
+    <div class="up">
+        <a id="top" class="bg-blur" href="#">▲</a>
+    </div>
+    </footer>
+
+</body>
+</html>

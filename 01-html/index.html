@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practcing HTML</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This is my resume">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="author" content="Ahmed Ibrahim">
+        
+        <link rel="icon" href="Favicon-circle.ico" type="x-icon">
+        
+        <!-- Internal CSS-->
+        <style>
+
+            
+        </style>
+        
+        <!-- External CSS-->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <nav class="nav-bar">
+                <ul>
+                    <li><a href="#Overview">Overview</a></li>
+                    <li><a href="#Skills">Skills</a></li>
+                    <li><a href="#Contacts">Contacts</a></li>
+                </ul>
+            </nav>
+        </header>
+        <br>
+        <header>
+            <h1>Resume</h1>
+            <h2 id="Overview ">Overview </h2>
+        </header>
+
+        <article class="bio-card">
+        <a href="https://fb.com/gemax0" target="_blank">
+            <img src="profile pic.jpg" alt="Gemax profile picture" title="Gemax picture" class="bio-img">
+        </a>
+
+        <div class="bio-info">
+            <h2>Ahmed Ibrahim</h2>
+            <p class="title">CS Graduate</p>
+            <p>Currently studying Software Engineering / Front-end.</p>
+            <blockquote>I'm trying to give my life a better-quality problems.</blockquote>
+        </div>
+        </article>
+
+        <hr>
+        <h2 id="Skills">Skills</h2>
+        <table>
+            <caption>Technical Skills</caption>
+            <tr aria-rowspan="2">
+                <ol>
+                <th rowspan="2">1. Product Management</th>
+                <th rowspan="2">2. Analysis</th>
+                <th colspan="3">3. Design</th>
+                <th colspan="3">4. Development</th>
+                </ol>
+            </tr>
+            <tr>
+                <th>3.1 UI</th>
+                <th>3.2 Modeling Architecture</th>
+                <th>3.3 Diagraming DB </th>
+                <th>4.1 Backend</th>
+                <th>4.2 Frontend</th>
+                <th>4.3 Database</th>
+
+            </tr>
+            <tr style=>
+                <td>Agile Mindset</td>
+                <td>UX Process</td>
+                <td>Wireframes</td>
+                <td>C4 Model</td>
+                <td>ERD</td>
+                <td>ASP.Net Api</td>
+                <td>React.js</td>
+                <td>SQL DB</td>
+            </tr>
+            <tr>
+                <td>Scrum framework</td>
+                <td>Requirement Engineering</td>
+                <td >Mockups</td>
+                <td colspan="2"></td>
+                <td>API .NET 8.0</td>
+                <td>Next.js</td>
+                <td>NOSQL DB</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td>Prototyping</td>
+                <td colspan="5"></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td>Useability testing</td>
+                <td colspan="5"></td>
+            </tr>
+        </table>
+
+        <hr>
+        <h2 id ="Contacts">Contacts</h2>
+        <a href="https://www.fb.com/gemax0"><img src="https://upload.wikimedia.org/wikipedia/en/0/04/Facebook_f_logo_%282021%29.svg" width="30px"></a>
+        <a href="mailto:gemax.hope@gmail.com">Mail me</a>
+        <button onclick="document.location='https://www.fb.com'">Click here</button>
+        <hr>
+        <h2>Address</h2>
+        <address>
+            Ibrahimiya, 
+            Sharqiya<br>
+            Egypt
+        </address>
+        <hr>
+        <ol type="A" start="3">
+            <li>item</li>
+            <li>item</li>
+            <li>item</li>
+        </ol>
+        <hr>
+        <h2>Div elemnet</h2>
+        <h3>float</h3>
+        <div style="font-size: 80px; background-color: rgb(65, 39, 4); overflow: auto;">
+            <div style="background-color: rgb(54, 31, 1); float: left; width: 33%">div 1</div>
+            <div style="background-color: rgb(14, 9, 1); float: left;width: 34%;">div 2</div>
+            <div style="background-color: rgb(22, 13, 0); float: left; width: 33%;">div 3</div>
+        </div>
+        <h3>inline-block</h3>
+        <div class="inline-block-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <h3>Flex box</h3>
+        <div class="flex-container"> 
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+        </div>
+        <h3>grid-container</h3>
+        <div class="grid-container">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+        </div>
+        <hr>
+        <h2>classes</h2>
+        <h3>* element has 1 class</h3>
+        <div class="a">div 1 class 'a' only</div>
+        <h3>one element has * classes</h3>
+        <div class="a b">div 2 Class 'a' & b</div>
+        <div class="A">div 3 class 'A'<p><mark>note* class name is case senstive</mark></p></div>
+        <hr>
+        <h2>Iframe</h2>
+        <p>here's iframe example</p>
+        <iframe src="another web page.html" width="100%" title="example for iframe" style="border: 3px dashed burlywood;"></iframe>
+
+        <h2>HTML JavaScript</h2>
+        <h3> u can use internal script in the html file using <code>  &lt;script&gt;</code> tag</h3>
+        <p>example</p>
+        <button onclick="myFunction()">Click me</button>
+        <p id="demo">This text will change.</p>
+        <script>
+            function myFunction(){
+                document.getElementById("demo").innerHTML= "Changed!! 🥳✨";
+            }
+        </script>
+
+        <h3> u can use external script in the html file using <code>  &lt;script&gt;</code> tag and 'src' attribute</h3>
+        <p>example</p>
+        <script src="script.js"></script>
+        
+        <p id="red-text">this text color will be red if u click the button</p>
+        <button onclick="redIt()">make it red</button>
+        <hr />
+        <h2>
+            Semantic elements
+        </h2>
+        <details close>
+        <summary>What is PureLearn App?</summary>
+        <p>PureLearn is an all-in-one platform that helps self-learners structure their learning process, track goals, and stay motivated.</p>
+        </details>
+        <h2>
+           HTML Forms
+        </h2>
+        <h3>Get in touch with me! ✨</h3>
+        <form action="" method="post" autocomplete="on" onsubmit="const submit = document.getElementById('submit'); submit.disabled=true; submit.value='submiting..'">
+            <fieldset>
+                <legend>Personal Info:</legend>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required><br>
+                
+                <label for="email">Email</label>
+                <input type="email" id="Email" name="email" placeholder="Your email" required><br>
+            </fieldset>
+            <fieldset>
+                <legend >Service type:</legend>
+                <input type="radio" id="smalltask" name="Service-type">
+                <label for="smalltask">Small task</label><br>
+               
+                <input type="radio" id="short-term" name="Service-type">
+                <label for="short-term">Short-term Project</label><br>
+               
+                <input type="radio" id="long-term" name="Service-type">
+                <label for="long-term">Long-term Project</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Chose your Services</legend>
+                <input type="checkbox" id="product" name="Services" value="Product Management">
+                <label for="product">Product Management</label><br>
+               
+                <input type="checkbox" id="analysis" name="Services" value="Systems Analysis">
+                <label for="analysis">Systems Analysis</label><br>
+               
+                <input type="checkbox" id="uiux" name="Services" value="UI/UX Design">
+                <label for="uiux">UI/UX Design</label><br>
+               
+                <input type="checkbox" id="frontend" name="Services" value="Frontend Development">
+                <label for="frontend" style="width:100%;">Front-end Development</label><br>
+               
+                <input type="checkbox" id="backend" name="Services" value="Backend Development">
+                <label for="backend">Backend Development</label><br>
+               
+                <input type="checkbox" id="db" name="Services" value="Database Engineering">
+                <label for="db">Database Engineering</label><br>
+            </fieldset>
+            <fieldset>
+                <legend>Payment method</legend>
+                <select name="paymethod" id="paymetho">
+                    <option value="credit">credit</option>
+                    <option value="ewallet">e-wallet</option>
+                    <option value="paypal" selected>PayPal</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Select / Create Category</legend>
+                <input list="Categories" name="Category">
+                <datalist id="Categories">
+                    <option value="Product Management" selected></option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Software Engineering">Software Engineering</option>
+                    <option value="DevOps"></option>
+                </datalist>
+            </fieldset>
+            <fieldset oninput="total.value = parseInt(budget.value) + parseInt(bonus.value)">
+                <legend>Your budget</legend>
+                <label for="budget"> budget</label>
+                <input type="range" id="budget"name="budget" min="25" max="1000" value="25" step="5">
+                <span>+</span>
+                <label for="bonus">bonus</label>
+                <input type="number" name="bonus" id="bonus" min=0 value="0" step="5">
+                <span>=</span>
+                <output id="total" name="total" for="budget bonus">25</output><span>$</span>
+            </fieldset>
+            <label for="message">Leave a message</label><br>
+            <textarea name="message" id="message" placeholder="if any"></textarea><br>
+
+            <label for="attachment">add attachments</label>
+            <input type="file" name="" id="">
+
+            <input type="color" name="" id=""><br>
+         
+            <label for="appointment">make appointment </label>
+            <input type="datetime-local" name="appointment" id="appointment"><br>
+
+            <br><input type="submit" value="submit" id="submit">
+            <button type="reset">reset</button>
+            
+        </form>
+
+    </body>
+        
+</html>
