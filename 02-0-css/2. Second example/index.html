@@ -9,7 +9,7 @@
 <body>
     <nav class="nav-container">
         <ul class="nav bg-blur">
-            <li ><a class="show-side">◧</a></li>
+            <li ><a class="show-sidebar">◧</a></li>
             <li ><a href="#dispaly">Display</a></li>
             <li><a href="#postioning">Postioning</a></li>
             <li class="dropdown"><a> More ▾</a>
@@ -23,31 +23,30 @@
             </li>
         </ul>
     </nav>
-
     <header>
-        <div  class="cover">
-            <h1 class="cover-text" id="cover-title">Layout Practcing file</h1>    
-            <h2 class="cover-text" id="sub-title">This file for Practcing CSS</h2>    
+        <div  class="cover-container">
+            <div  class="cover subject-element"></div> 
+            <div class="text-container">
+                <h1 class="cover-text" id="cover-title">Layout Practcing file</h1>    
+                <h2 class="cover-text" id="sub-title">This file for Practcing CSS</h2>    
+                
+            </div> 
         </div>  
     </header>
     <nav >
-        <ul class="side-nav-bar bg-blur">
+        <ul class="sidebar-nav-bar bg-blur">
             <li ><a href="#">Link1</a></li>
             <li><a href="#">Link2</a></li>
             <li><a href="#">Link3</a></li>
             <li><a href="#">Link4</a></li>
         </ul>
-
-        <ul class="breadcrumb">
-        <li><a href="#">Home</a><span tabindex="0"></span></li>
-        <li><a href="#">Pictures</a><span tabindex="0"></span></li>
-        <li><a href="#">Summer 25</a><span tabindex="0"></span></li>
-        <li><a href="#">Italy</a><span tabindex="0"></span></li>
-        </ul>
-
-        <br>
-
         <main>
+                <ul class="breadcrumb">
+                <li><a href="#">Home</a><span tabindex="0"></span></li>
+                <li><a href="#">Pictures</a><span tabindex="0"></span></li>
+                <li><a href="#">Summer 25</a><span tabindex="0"></span></li>
+                <li><a href="#">Italy</a><span tabindex="0"></span></li>
+                </ul>
             <h2>Display property</h2>
             <table style="size: auto;">
                 <tr >
@@ -69,7 +68,14 @@
     <article> 
         <h2>Postioning</h2>
         <ul>
-            <li>postion</li>
+            <li>postions</li>
+            <ul>
+                <li>Static</li>
+                <li>Relative</li>
+                <li>Absolute</li>
+                <li>Fixed</li>
+                <li>Sticky</li>
+            </ul>
             <li>z-inderx</li>
             <li>overflow</li>
             <li>float
@@ -81,7 +87,7 @@
                 <li>Align <q><i>should back to after flex and grid lesson</i></q></li>
             </ul>
             <h3>Relative & Absolute Comp</h3>
-            <div 
+            <div  class="subject-element"
                 style="background-color: #333; width:30rem; height:30rem; border-radius: 0.75rem; margin: auto; 
                 
                             position: relative;">
@@ -225,7 +231,7 @@
     
         <div
             style="
-            width: 300px;
+            width: calc(100% - 50px);
             height: 300px;
             background-image: linear-gradient(120deg,black, purple, #ffffff);
             border: #0993e328 solid 8px;
@@ -236,7 +242,7 @@
 
         <div
             style="
-            width: 300px;
+            width: calc(100% - 50px);
             height: 300px;
             background-image: radial-gradient(circle, purple, white );
             margin: auto;
@@ -248,7 +254,7 @@
             <h3>shadow</h3>
             <div
             style="
-            width: 300px;
+            width: calc(100% - 50px);
             height: 300px;
             background-image: radial-gradient(circle, purple, white );
             margin: auto;
@@ -276,7 +282,7 @@
             <div class="twoD-transformation"
             
             style="
-            width: 300px;
+            width: calc(100% - 50px);
             height: 300px;
             background-image: radial-gradient(circle, purple, white );
             margin: auto;
@@ -308,7 +314,7 @@
                 <div class="threeD-transformation"
                 
                 style="
-                    width: 300px;
+                    width: calc(100% - 50px);
                     height: 300px;
                     background-image: radial-gradient(circle, purple, white ) ;
                     margin: auto;
@@ -380,183 +386,100 @@
 
     <article> 
         <h2> Flex Box</h2>
-
+        
         <section >
-                <h3>Text effect</h3>
-                <div 
-                    class="flex-container"
-                    style="
-                    width: calc(100% - 30px);
-                    height: 500px;
-                    background-image: radial-gradient(circle, purple, white );
-                    margin: auto;
-                    padding: 0;
-                    border-radius: 10px 50px;
-                    
-                    box-shadow:
-                    0px 0px 10px 1px #ffffff,
-                    0px 0px 20px 1px #ffffff,
-                    0px 0px 30px 1px #ff00f7
-                    ;
-                    
-                    display: flex;
-                    flex-flow: row wrap;
-
-                    justify-content: start;
-                    justify-content:flex-end;
-                    
-                    justify-content:space-around;
-                    justify-content:space-between;
-                    justify-content: center;
-                    justify-content:space-evenly;
-
-                    align-items: center;
-                    align-items: flex-end;
-                    align-items: stretch;
-                    align-items: baseline;
-                    align-items: start;
-
-                    align-content: start;
-                    align-content: center;
-                    align-content: end;
-                    align-content: space-around;
-                    align-content: space-between;
-                    align-content: space-evenly;
-                    
-                    overflow: hidden;
-
-                    
-                    ">
-
-                <div
-                    style="
-                            border: gray solid 1px;
-                            border-radius: 10px 50px;
-                            width: 100px;
-                            height: 100px;
-                            color: black;
-                            "
-                >
-                <p 
-                style="
-                        color: inherit; 
-                        text-align: left;
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-
-                        "
-                    
-                    >Hello, World! 1 Hello, World! 1 Hello, World! 1 Hello, World! 1 Hello, World! 1 Hello, World! 1</p>
+            <div class="flex-container">
+                <div class="flex-item" f1>
+                    <p>1</p>
                 </div>
-
-                <div
-                style=
-                "
-                    border: gray solid 1px;
-                    border-radius: 10px 50px;
-                    width: 100px;
-            
-                    color: black;
-                "
-                >
-                    <p style= "text-align: center; color: inherit;">Hello, World! 2</p>
+                <div class="flex-item" f2>
+                    <p>2</p>
                 </div>
-
-                <div
-                style=
-                "
-                    border: gray solid 1px;
-                    border-radius: 10px 50px;
-                    width: 100px;
-                    height: 100px;
-                    color: black;
-                "
-                >
-                    <p style= "text-align: center; color: inherit;">Hello, World! 3</p>
+                <div class="flex-item" f3>
+                    <p>3</p>
                 </div>
-                <div
-                style=
-                "
-                    border: gray solid 1px;
-                    border-radius: 10px 50px;
-                    width: 100px;
-                    height: 100px;
-                    color: black;
-                "
-                >
-                    <p style= "text-align: center; color: inherit;">Hello, World! 4</p>
+                <div class="flex-item" f4>
+                    <p>4</p>
                 </div>
-
-                <div
-                style=
-                "
-                    border: gray solid 1px;
-                    border-radius: 10px 50px;
-                    width: 100px;
-                    height: 100px;
-                    color: black;
-                "
-                >
-                    <p style= "text-align: center; color: inherit;">Hello, World! 5</p>
+            </div>
+        </section>
+        <section >
+            <h3>Flex Charts</h3>
+            <div class="flex-container">
+                <div class="flex-item" f1>
+                    <p>1</p>
                 </div>
-
-                <div
-                style=
-                "
-                    border: gray solid 1px;
-                    border-radius: 10px 50px;
-                    width: 100px;
-                    height: 100px;
-                    color: black;
-                "
-                >
-                    <p style= "text-align: center; color: inherit;">Hello, World! 6</p>
+                <div class="flex-item" f2>
+                    <p>2</p>
                 </div>
-               
-                <div
-                style=
-                "
-                    border: gray solid 1px;
-                    border-radius: 10px 50px;
-                    width: 100px;
-                    height: 100px;
-                    color: black;
-                "
-                >
-                    <p style= "text-align: center; color: inherit;">Hello, World! 6</p>
+                <div class="flex-item" f3>
+                    <p>3</p>
                 </div>
-               
-                <div
-                style=
-                "
-                    border: gray solid 1px;
-                    border-radius: 10px 50px;
-                    width: 100px;
-                    height: 100px;
-                    color: black;
-                "
-                >
-                    <p style= "text-align: center; color: inherit;">Hello, World! 6</p>
+                <div class="flex-item" f4>
+                    <p>4</p>
                 </div>
-               
-                <div
-                style=
-                "
-                    border: gray solid 1px;
-                    border-radius: 10px 50px;
-                    width: 100px;
-                    height: 100px;
-                    color: black;
-                "
-                >
-                    <p style= "text-align: center; color: inherit;">Hello, World! 6</p>
-                </div>
-
             </div>
         </section>
     </article>
-    
+    <article> 
+        <h2>Grid Layout</h2>
+        <section >
+            <div class="grid-container">
+                <div class="grid-item" g1="">
+                    <p>1</p>
+                </div>
+                <div class="grid-item" g2="">
+                    <p>2</p>
+                </div>
+                <div class="grid-item" g3="">
+                    <p>3</p>
+                </div>
+                <div class="grid-item" g4="">
+                    <p>4</p>
+                </div>
+                <div class="grid-item" g5="">
+                    <p>5</p>
+                </div>
+                <div class="grid-item" g6="">
+                    <p>6</p>
+                </div>
+                <div class="grid-item" g7="">
+                    <p>7</p>
+                </div>
+                <div class="grid-item" g8="">
+                    <p>8</p>
+                </div>
+                <div class="grid-item" g9="">
+                    <p>9</p>
+                </div> 
+            </div>
+        </section>
+        <section>
+            <h3>Another example using <code style="font-size: medium;">grid-area</code>:</h3>
+            <div class="grid-container-area">
+                <div class="header segment">
+                    <button >◧</button>
+                    <p style="text-align: center;">
+                        header
+                    </p>
+                </div>
+                <div class="sidebar segment">Sidebar</div>
+                <div class="main segment">Main</div>
+                <div class="right segment">Right</div>
+                <div class="footer segment">Footer</div>
+            </div>
+        </section>
+    </article>
+    <article>
+        <br>
+        <h2>CSS Varibales & @ property rule</h2>
+        <section>
+            <h3>CSS Varibales</h3>
+        </section>
+        <section>
+            <h3>CSS  @property rule</h3>
+        </section>
+    </article>
 
     </main>   
     <footer>
