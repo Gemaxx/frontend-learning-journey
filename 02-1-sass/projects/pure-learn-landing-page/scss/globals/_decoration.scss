@@ -1,0 +1,8 @@
+.rounded {
+    border-radius: 4;
+}
+
+a, :is(:visited, :hover) {
+    text-decoration: none;
+    color: var(--foreground);
+}

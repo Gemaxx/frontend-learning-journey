@@ -1,0 +1,46 @@
+:root {
+  /* ===== PRIMARY / SECONDARY ===== */
+  --primary: light-dark(#18181B, #FAFAFA);
+  --primary-foreground: light-dark(#FAFAFA, #18181B);
+  --primary-hover: color-mix(in srgb, var(--primary), white 10%);
+  
+  --secondary: transparent;
+  --secondary-foreground: light-dark(#18181B, #FAFAFA);
+  --secondary-hover: color-mix(in srgb, var(--secondary), white 8%);
+}
+
+@mixin color($token) {
+    color: var(--#{$token}-foreground);
+    background-color: var(--#{$token});
+    border: var(--border) solid 1px;
+    outline: 1px solid var(outline); 
+    &:hover {
+        background-color: var(--#{$token}-hover);
+        border: var(--border) solid 1px;
+    }
+}
+
+button, .btn { 
+    padding: 0.8rem;
+    border-radius: 0.6rem;  
+    text-wrap: nowrap;
+    cursor: pointer;
+    outline: 1px solid var(outline); 
+    &:hover {
+        background-color: var(--secondary-hover);
+    }
+    
+    
+    &.primary {
+        @include color(primary);
+    }
+    
+    &.secondary {
+        @include color(secondary);
+    }
+    &-icon {
+        font-size: 2.4rem;
+        font-weight: 100;
+        padding: 1.4rem;
+    }
+}

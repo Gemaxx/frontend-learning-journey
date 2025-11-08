@@ -1,0 +1,15 @@
+.nav-list {
+    ul {
+        list-style: none;
+        display: flex;
+        height: 100%;
+        gap: 1.6rem;
+
+        a {
+            display: inline-block;
+            padding: auto;
+            height: inherit;
+            color: var(--foreground);
+        }
+    }
+}

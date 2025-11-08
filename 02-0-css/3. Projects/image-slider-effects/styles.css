@@ -1,0 +1,221 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+html {
+    font-size: 10px;
+}
+body{
+    background-color: #6d6d6d;
+    background-image:
+    repeating-linear-gradient(
+        to right, transparent 0 100px,
+        #25283b22 100px 101px
+    ),
+    repeating-linear-gradient(
+        to bottom, transparent 0 100px,
+        #25283b22 100px 101px
+    );
+}
+
+body::before{
+    position: absolute;
+    width: min(1400px, 90vw);
+    top: 10%;
+    left: 50%;
+    height: 90%;
+    transform: translateX(-50%);
+    content: '';
+    background-image: url(images/bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+/*Banner*/
+:root {
+    --slider-width: min(20%, 200px);
+    --slider-height: 10vh;
+    --circle-radius: min(40vw, 550px);
+}
+.banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+.slider {
+    position: absolute;
+
+    /*size*/
+    width: var(--slider-width);
+    aspect-ratio: 2/2.5;
+
+    top: 25%;
+    left: calc(50%);
+    translate: -50% -25%;
+
+    /*3D Scene*/
+    transform-style: preserve-3d;
+    transform: 
+    perspective(1000px)
+    rotatex(-15deg)
+    ;
+
+   
+   animation: rotation 30s linear  infinite;
+   
+   z-index: 5;
+}
+
+@keyframes rotation {
+    from{
+        transform: 
+        perspective(1000px)
+        rotatex(-15deg)
+        rotateY(0deg)
+        ;
+
+    }
+    to {
+        transform:
+        perspective(1000px)
+        rotatex(-15deg)
+        rotateY(360deg)
+        ;
+    }
+}
+
+.item {
+    position: absolute;
+    inset: 0 0 0 0;
+
+    border-radius: 8px;
+
+    transform: 
+        /* Postions for each item*/
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        
+        /*Circle Radius*/
+        translateZ(var(--circle-radius))
+        ;
+    
+    transition: 1s;
+
+}
+.item:hover {
+    transform: 
+        /* Postions for each item*/
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        
+        /*Circle Radius*/
+        translateZ(var(--circle-radius))
+
+        translateY(-50px)
+
+        scale(1.1)
+    ;
+
+    box-shadow:
+        0px 0px 1px brown,
+        0px 0px 5px rgb(245, 81, 15),
+        0px 0px 25px rgb(246, 255, 0),
+        0px 0px 50px goldenrod,
+        0px 0px 75px rgb(225, 255, 0),
+        0px 0px 1000px 50px rgb(255, 0, 0)
+        ;
+    ;
+
+
+}
+
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.banner .content {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    translate: -50%;
+
+    width: min(1400px, 100vw);
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.banner .content h1 {
+    font-family: 'ICA Rubrik';
+    font-size: 12rem;
+    line-height: 1em;
+    color: #1c1729;
+    position: relative;
+    text-shadow: 0 10px 20px #0000001e;
+}
+.banner .content h1::after {
+    position: absolute;
+    inset: 0 0 0 0;
+    content: attr(data-content);
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(217, 215, 215);
+    z-index: 3;
+}
+
+
+.author {
+    font-family: 'Poppins';
+    text-align: right;
+    font-size: 2rem;
+    max-width: 250px;
+    z-index: 5;
+    color: rgb(223, 215, 234);
+    padding-right: 10px ;
+    text-shadow: 0 1rem 10px #00000077;
+}
+.author h2{
+    font-size: 6rem;
+}
+.model {
+    background: url(images/model.png) no-repeat;
+    background-size: auto 100%;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(40%);
+    bottom: -50%;
+    background-position: center;
+
+}
+.model::after {
+    background: url(images/model.png) no-repeat;
+    content: "";
+    inset: 0 0 0 0;
+    z-index: 6;
+}
+
+
+@media (width < 768px) {
+    html {
+        font-size: 5px;
+    }
+}
+@media (width > 768px) {
+
+    .item {
+        translate: 0px -30%;
+    }
+}
