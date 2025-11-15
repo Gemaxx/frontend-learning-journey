@@ -2,8 +2,8 @@
 :root {
     color-scheme: light dark;
 
-      /* ===== BASE ===== */
-  --background: light-dark(#FFFFFF, #000000);
+  /* ===== BASE ===== */
+  --background: light-dark(#FFFFFF, #09090B);
   --foreground: light-dark(#09090B, #FAFAFA);
 
   --card: light-dark(#FFFFFF, #09090B);
@@ -12,6 +12,16 @@
   --popover: light-dark(#FAFAFA, #09090B);
   --popover-foreground: light-dark(#09090B, #FAFAFA);
 
+  /* ===== PRIMARY / SECONDARY ===== */
+  --primary: light-dark(#18181B, #FAFAFA);
+  --primary-foreground: light-dark(#FAFAFA, #18181B);
+  --primary-hover-light: color-mix(in srgb, var(--primary), black 10%);
+  --primary-hover-dark:  color-mix(in srgb, var(--primary), white 10%);
+  --primary-hover:  light-dark(var(--primary-hover-light), var(--primary-hover-dark))
+  
+  --secondary: transparent;
+  --secondary-foreground: light-dark(#18181B, #FAFAFA);
+  --secondary-hover:  light-dark(var(--primary-hover-light), var(--primary-hover-dark))
 
   /* ===== STATE COLORS ===== */
   --muted: light-dark(#F4F4F5, #27272A);
@@ -30,7 +40,7 @@
 
   /* ===== SHADOW & GLASS ===== */
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
+
   --glass-blur: 12px;
   --glass-tint: light-dark(rgba(255,255,255,0.4), rgba(0,0,0,0.4));
 }

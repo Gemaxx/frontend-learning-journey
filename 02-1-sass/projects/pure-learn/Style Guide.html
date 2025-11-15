@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="scss/dist/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This doc for showcasing our Design System">
+    <title>Design system Style Guide</title>
+
+    <style>
+        .brdr-btm {
+            border-bottom: 1px solid var(--border);
+        }
+        #spacing {
+            margin-top: 4rem;
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+        }
+
+        .spacing-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 50rem;
+        }
+
+        .spacing-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .spacing-item .label {
+            width: 10rem;
+            font-family: monospace;
+            font-size: 1.3rem;
+        }
+
+        .spacing-item .bar {
+            height: 1rem;
+            background-color: var(--primary, #0078ff);
+            border-radius: var(--radius-sm, 0.4rem);
+            min-width: 0.4rem;
+        }
+
+        .spacing-item .value {
+            font-size: 1.2rem;
+        
+        }
+
+        #colors {
+            margin-top: 4rem;
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
+        }   
+
+        .color-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 64px);
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .color-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+            text-align: center;
+        }
+
+        .color-item .swatch {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: var(--radius-md, 0.8rem);
+            box-shadow: var(--shadow-md);
+        }
+
+        .color-item .label {
+            font-family: monospace;
+            font-size: 1.2rem;
+            color: var(--foreground);
+        }
+        section {
+            padding-inline: 20%;
+        }
+
+    </style>
+
+</head>
+<body>
+        <header>
+        <nav>
+            <a id="logo" href="index.html" aria-label="PureLearn logo" role="img">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="1.4rem"
+                    height="1.9rem"
+                    viewBox="0 0 14 19"
+                    fill="none"
+                    aria-hidden="true"
+                >
+                    <path
+                        d="M4.3172 4.58983L4.19956 16.5114C4.12773 16.889 3.92926 17.2308 3.63693 17.4803C3.3446 17.7299 2.9759 17.8723 2.59171 17.884C2.19408 17.8901 1.80701 17.7559 1.49858 17.5048C1.19016 17.2538 0.98013 16.902 0.905439 16.5114V12.3545C0.888474 12.1752 0.91131 11.9944 0.972317 11.8249C1.03332 11.6554 1.131 11.5015 1.25836 11.3741C1.38573 11.2468 1.53964 11.1491 1.70912 11.0881C1.8786 11.0271 2.05945 11.0042 2.23877 11.0212H8.19956C9.40136 10.8867 10.5217 10.3477 11.3768 9.49261C12.2319 8.63751 12.771 7.51712 12.9054 6.31532C12.932 5.59751 12.8101 4.88195 12.5475 4.21337C12.285 3.54478 11.8873 2.93755 11.3794 2.42964C10.8714 1.92172 10.2642 1.52404 9.59563 1.26146C8.92705 0.99888 8.21148 0.877041 7.49367 0.90356H3.2976C2.10713 0.90356 0.905439 2.28846 0.905439 3.09964V4.66827"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </svg>
+            </a>
+
+
+            <div class="nav-list">
+                <ul>
+                    <li><a href="Style Guide.html" class="btn">Style Guide</a></li>
+                    <li><a href="Components.html" class="btn">Components</a></li>
+                    <li><a href="" class="btn">About</a></li>
+                </ul>
+            </div>
+            
+            <div id="nav-cta">
+                <button class="secondary">Login</button>
+                <button class="primary">Sign Up</button>
+            </div>
+            
+            <div id="nav-burger" class="btn btn-icon">≡</div>
+        </nav>
+    </header>
+    <h1>PureLearn Style Guide </h1>
+    <h2>Typography</h2>
+
+    <h3 class="brdr-btm">Headings</h3>
+    <h1>Hello this is heading 1</h1>
+    <h2>Hello this is heading 2</h2>
+    <h3>Hello this is heading 3</h3>
+    <h4>Hello this is heading 4</h4>
+    <h5>Hello this is heading 5</h5>
+    <h6>Hello this is heading 6</h6>
+    
+    <h2 class="brdr-btm">Paragraph</h2>
+    <p>Hello this Paragraph</p>
+    <p>Hello this Paragraph</p>
+    
+    <!-- blockquote, list, table, code,  lead, large, small, muted -->
+    
+    <section id="colors">
+        <h1>Colors</h1>
+        <p>The PureLearn color tokens define a balanced light/dark mode palette using the <code>light-dark()</code> function. Each color below reflects its current mode value.</p>
+
+        <div class="color-list">
+
+            <div class="color-item">
+            <div class="swatch" style="background: var(--background);"></div>
+            <span class="label">--background</span>
+            </div>
+
+            <div class="color-item">
+            <div class="swatch" style="background: var(--foreground);"></div>
+            <span class="label">--foreground</span>
+            </div>
+
+            <div class="color-item">
+            <div class="swatch" style="background: var(--primary);"></div>
+            <span class="label">--primary</span>
+            </div>
+
+            <div class="color-item">
+            <div class="swatch" style="background: var(--primary-hover);"></div>
+            <span class="label">--primary-hover</span>
+            </div>
+
+            <div class="color-item">
+            <div class="swatch" style="background: var(--secondary); border: 1px solid var(--border);"></div>
+            <span class="label">--secondary</span>
+            </div>
+
+            <div class="color-item">
+            <div class="swatch" style="background: var(--muted);"></div>
+            <span class="label">--muted</span>
+            </div>
+
+            <div class="color-item">
+            <div class="swatch" style="background: var(--accent);"></div>
+            <span class="label">--accent</span>
+            </div>
+
+            <div class="color-item">
+            <div class="swatch" style="background: var(--destructive);"></div>
+            <span class="label">--destructive</span>
+            </div>
+
+            <div class="color-item">
+            <div class="swatch" style="background: var(--border);"></div>
+            <span class="label">--border</span>
+            </div>
+
+            <div class="color-item">
+            <div class="swatch" style="background: var(--card);"></div>
+            <span class="label">--card</span>
+            </div>
+
+            <div class="color-item">
+            <div class="swatch" style="background: var(--popover);"></div>
+            <span class="label">--popover</span>
+            </div>
+        </div>
+    </section>
+
+    <h1>Elevation</h1>
+    <section id="spacing">
+    <h1>Spacing</h1>
+    <p>The 8pt spacing system ensures consistent rhythm and alignment across the PureLearn interface. All spacing tokens are defined in <code>_spacing.scss</code> using <strong>rem</strong> units, where <code>1rem = 10px</code>.</p>
+
+    <div class="spacing-list">
+
+        <div class="spacing-item">
+        <span class="label">--space-3xs</span>
+        <div class="bar" style="width: var(--space-3xs);"></div>
+        <span class="value">0.4rem / 4px</span>
+        </div>
+
+        <div class="spacing-item">
+        <span class="label">--space-2xs</span>
+        <div class="bar" style="width: var(--space-2xs);"></div>
+        <span class="value">0.8rem / 8px</span>
+        </div>
+
+        <div class="spacing-item">
+        <span class="label">--space-xs</span>
+        <div class="bar" style="width: var(--space-xs);"></div>
+        <span class="value">1.2rem / 12px</span>
+        </div>
+
+        <div class="spacing-item">
+        <span class="label">--space-sm</span>
+        <div class="bar" style="width: var(--space-sm);"></div>
+        <span class="value">1.6rem / 16px</span>
+        </div>
+
+        <div class="spacing-item">
+        <span class="label">--space-md</span>
+        <div class="bar" style="width: var(--space-md);"></div>
+        <span class="value">2.4rem / 24px</span>
+        </div>
+
+        <div class="spacing-item">
+        <span class="label">--space-lg</span>
+        <div class="bar" style="width: var(--space-lg);"></div>
+        <span class="value">3.2rem / 32px</span>
+        </div>
+
+        <div class="spacing-item">
+        <span class="label">--space-xl</span>
+        <div class="bar" style="width: var(--space-xl);"></div>
+        <span class="value">4.0rem / 40px</span>
+        </div>
+
+        <div class="spacing-item">
+        <span class="label">--space-2xl</span>
+        <div class="bar" style="width: var(--space-2xl);"></div>
+        <span class="value">4.8rem / 48px</span>
+        </div>
+
+        <div class="spacing-item">
+        <span class="label">--space-3xl</span>
+        <div class="bar" style="width: var(--space-3xl);"></div>
+        <span class="value">6.4rem / 64px</span>
+        </div>
+
+    </div>
+    </section>
+
+    <h1>Radius</h1>
+    <div class="radius-demo">
+        <div >radius-xs</div>
+        <div class="radius-xs">radius-xs</div>
+        <div class="radius-sm">radius-sm</div>
+        <div class="radius-md">radius-md</div>
+        <div class="radius-lg">radius-lg</div>
+        <div class="radius-xl">radius-xl</div>
+        <div class="radius-pill">radius-pill</div>
+        <div class="radius-circle">radius-circle</div>
+    </div>
+    <h1>Grid</h1>
+    <!-- Mobile, tablet, desktop -->
+</body>
+</html>

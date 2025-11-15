@@ -15,9 +15,12 @@ nav {
 
     &-burger {
         display:none;
-        
-        @media screen {
-            
-        }
     }
+    position: fixed;
+    top: 0;
+
+    background: var(--glass-tint);
+    width: 100%;
+
+    backdrop-filter: blure(--glass-blur)    ;
 }
