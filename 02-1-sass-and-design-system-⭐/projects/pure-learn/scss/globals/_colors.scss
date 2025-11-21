@@ -1,0 +1,94 @@
+/* ===========================================================
+   PURELEARN DESIGN SYSTEM — MODERN MONOCHROME COLOR TOKENS
+   Using OKLCH, color-mix, light-dark, and clean semantics.
+   Date: 2025 — Gemax Edition
+=========================================================== */
+
+:root {
+  color-scheme: light dark;
+
+  /* ===========================================================
+     PURE WHITE → PURE BLACK SCALE (OKLCH)
+     Perceptually perfect monochrome palette
+  ============================================================ */
+  --white: oklch(100% 0 0);
+  --gray-95: oklch(95% 0 0);
+  --gray-90: oklch(90% 0 0);
+  --gray-80: oklch(80% 0 0);
+  --gray-70: oklch(70% 0 0);
+  --gray-60: oklch(60% 0 0);
+  --gray-50: oklch(50% 0 0);
+  --gray-40: oklch(40% 0 0);
+  --gray-30: oklch(30% 0 0);
+  --gray-20: oklch(20% 0 0);
+  --gray-10: oklch(10% 0 0);
+  --black: oklch(0% 0 0);
+
+  /* ===========================================================
+     BASE LAYERS
+  ============================================================ */
+  --background: light-dark(var(--white), var(--black));
+  --foreground: light-dark(var(--black), var(--white));
+
+  --card: light-dark(var(--white), var(--gray-10));
+  --card-foreground: var(--foreground);
+
+  --popover: light-dark(var(--gray-95), var(--gray-20));
+  --popover-foreground: var(--foreground);
+
+  /* ===========================================================
+     PRIMARY / SECONDARY (Monochrome Buttons)
+  ============================================================ */
+
+  /* Brand = pure monochrome */
+  --primary: light-dark(var(--black), var(--white));
+  --primary-foreground: light-dark(var(--white), var(--black));
+
+  /* Predictable OKLCH hover (12% mix) */
+  --primary-hover: color-mix(
+    in oklch,
+    var(--primary),
+    var(--foreground) 12%
+  );
+
+  /* Secondary = minimal button */
+  --secondary: transparent;
+  --secondary-foreground: var(--foreground);
+
+  /* Subtle hover for secondary */
+  --secondary-hover: var(--gray-10)
+
+  /* ===========================================================
+     STATES (Muted / Accent / Destructive)
+  ============================================================ */
+
+  --muted: light-dark(var(--gray-95), var(--gray-20));
+  --muted-foreground: light-dark(var(--gray-40), var(--gray-90));
+
+  --accent: light-dark(var(--gray-90), var(--gray-30));
+  --accent-foreground: var(--foreground);
+
+  --destructive: oklch(55% 0.18 25); /* semantic red */
+  --destructive-foreground: var(--white);
+
+  /* ===========================================================
+     STRUCTURE / BORDERS / OUTLINE
+  ============================================================ */
+  --border: light-dark(var(--gray-90), var(--gray-20));
+  --input: var(--border);
+  --outline: light-dark(var(--gray-70), var(--gray-40));
+  --ring: light-dark(var(--black), var(--gray-80));
+
+  /* ===========================================================
+     SHADOW / GLASS EFFECT
+  ============================================================ */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  --glass-blur: 2px;
+  --glass-tint: light-dark(
+      oklch(97% 0 0 / 0.4),
+      oklch(10% 0 0 / 0.4)
+  );
+
+  
+}

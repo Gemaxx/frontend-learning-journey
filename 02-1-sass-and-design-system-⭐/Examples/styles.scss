@@ -1,0 +1,41 @@
+@mixin padding-margin($size) {
+    padding: $size;
+    margin: $size;
+}
+
+%card {
+    background-color: rgb(28, 28, 28) !important;
+    border: 1px solid rgb(56, 56, 56);
+    border-radius: 8px;
+    overflow-x: auto;
+
+}
+body {
+    @include padding-margin(0px);
+    background-color: black;
+    color: white;
+    padding-inline: 2%;
+}
+
+ pre {
+    @extend %card;
+    code {
+    background-color: transparent !important;
+    font-size: 15px;
+    line-height: 20px;
+    font-family: "Fira Code", monospace;
+    padding: 0px;
+    }
+}
+
+h1 {
+    margin-top: 48px;
+    margin-bottom: 0px;
+    font-size: 26px;
+}
+
+p {
+    color: lch(70% 0 0);
+}
+
+

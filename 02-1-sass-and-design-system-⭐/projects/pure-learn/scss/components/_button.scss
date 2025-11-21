@@ -2,7 +2,7 @@
     color: var(--#{$token}-foreground);
     background-color: var(--#{$token});
     border: var(--border) solid 1px;
-    outline: 1px solid var(outline); 
+    outline: 1px solid var(--outline); 
     &:hover {
         background-color: var(--#{$token}-hover);
         border: var(--border) solid 1px;
